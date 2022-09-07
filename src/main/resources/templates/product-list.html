@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>List Product</h3>
+    <a th:href="${'/product/add'}">Thêm</a>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Product Name</td>
+            <td>Price</td>
+        </thead>
+        <tbody>
+            <tr th:each="obj: ${ListProduct}">
+                <td th:text="${obj.id}">Id</td>
+                <td th:text="${obj.productName}">Product Name</td>
+                <td th:text="${obj.price}">Price</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
